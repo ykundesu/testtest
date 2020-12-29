@@ -1,0 +1,38 @@
+<title>{{name}}の詳細|Yoppy Inc.</title><meta name="robots" content="noindex"><script>function search(){window.location.href="../../search/"+document.forms[0].elements[0].value;}</script><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../../">Yoppy Inc.</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="../../">ホーム<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>買いたいものを
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="買いたいものを入力" aria-label="Search">
+      <a class="btn btn-outline-success my-2 my-sm-0" href="javascript:search()">探す</a>
+    </form>
+  </div></nav>
+<div class="card">
+  <div class="card-body">
+<h2>{{name}}の詳細</h2>
+  </div>
+</div>
+<h3>値段:{{money}}円</h3>
+<center><h1>購入</h1></center>
+<font color="red">{{error}}</font>
+{{pkid}}
+<form method="post">
+  {{ form.as_p }}
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary" name="kounyuu">購入</button>
+</form>
